@@ -11,7 +11,7 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { ConferenceApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+// import { AboutPage } from '../pages/about/about';
 import { PopoverPage } from '../pages/about-popover/about-popover';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
@@ -25,15 +25,18 @@ import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SupportPage } from '../pages/support/support';
+import { StaticgkPage } from '../pages/staticgk/staticgk';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import { StaticgkListProvider } from '../providers/staticgk-list/staticgk-list';
 
 
 @NgModule({
   declarations: [
     ConferenceApp,
-    AboutPage,
+    StaticgkPage,
+    // AboutPage,
     AccountPage,
     LoginPage,
     MapPage,
@@ -47,6 +50,7 @@ import { UserData } from '../providers/user-data';
     TabsPage,
     TutorialPage,
     SupportPage
+    
   ],
   imports: [
     BrowserModule,
@@ -60,12 +64,13 @@ import { UserData } from '../providers/user-data';
         { component: SpeakerListPage, name: 'SpeakerList', segment: 'speakerList' },
         { component: SpeakerDetailPage, name: 'SpeakerDetail', segment: 'speakerDetail/:speakerId' },
         { component: MapPage, name: 'Map', segment: 'map' },
-        { component: AboutPage, name: 'About', segment: 'about' },
+        // { component: AboutPage, name: 'About', segment: 'about' },
         { component: TutorialPage, name: 'Tutorial', segment: 'tutorial' },
         { component: SupportPage, name: 'SupportPage', segment: 'support' },
         { component: LoginPage, name: 'LoginPage', segment: 'login' },
         { component: AccountPage, name: 'AccountPage', segment: 'account' },
-        { component: SignupPage, name: 'SignupPage', segment: 'signup' }
+        { component: SignupPage, name: 'SignupPage', segment: 'signup' },
+        { component: StaticgkPage, name: 'StaticgkPage', segment: 'staticgk' }
       ]
     }),
     IonicStorageModule.forRoot()
@@ -73,7 +78,8 @@ import { UserData } from '../providers/user-data';
   bootstrap: [IonicApp],
   entryComponents: [
     ConferenceApp,
-    AboutPage,
+    StaticgkPage,
+    // AboutPage,
     AccountPage,
     LoginPage,
     MapPage,
@@ -93,7 +99,8 @@ import { UserData } from '../providers/user-data';
     ConferenceData,
     UserData,
     InAppBrowser,
-    SplashScreen
+    SplashScreen,
+    StaticgkListProvider
   ]
 })
 export class AppModule { }

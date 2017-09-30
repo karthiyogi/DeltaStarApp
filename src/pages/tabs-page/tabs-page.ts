@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 
 import { NavParams } from 'ionic-angular';
 
-import { AboutPage } from '../about/about';
+// import { AboutPage } from '../about/about';
+
 import { MapPage } from '../map/map';
 import { SchedulePage } from '../schedule/schedule';
 import { SpeakerListPage } from '../speaker-list/speaker-list';
+import { StaticgkPage } from '../staticgk/staticgk';
 
 @Component({
   templateUrl: 'tabs-page.html'
@@ -15,7 +17,8 @@ export class TabsPage {
   tab1Root: any = SchedulePage;
   tab2Root: any = SpeakerListPage;
   tab3Root: any = MapPage;
-  tab4Root: any = AboutPage;
+  tab4Root: any = StaticgkPage;
+  
   mySelectedIndex: number;
 
   constructor(navParams: NavParams) {
